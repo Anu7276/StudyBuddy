@@ -395,6 +395,16 @@ body{
         padding: 0 32px;
         right: 0;
         left: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+    .container.active .form-box.Register {
+        pointer-events: auto;
+        visibility: visible;
+    }
+    .container.active .form-box.Login {
+        pointer-events: none;
+        visibility: hidden;
     }
     
     /* Animation adjustments for stacked layout */
