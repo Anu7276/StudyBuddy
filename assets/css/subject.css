@@ -402,6 +402,17 @@
     color: var(--text-primary, #0f172a);
 }
 
+.notes-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--blue-dark, #1d4ed8);
+    margin: 28px 0 12px;
+}
+
+.notes-content h3:first-child {
+    margin-top: 0;
+}
+
 .notes-content p {
     margin-bottom: 20px;
 }
