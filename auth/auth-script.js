@@ -159,7 +159,7 @@ registerForm.addEventListener("submit", async (e) => {
             password,
             options: {
                 data: { full_name: name },
-                emailRedirectTo: window.location.origin + "/auth/callback.html",
+                emailRedirectTo: sbPublicAuthCallbackUrl(),
             },
         });
 
@@ -205,9 +205,9 @@ async function handleGoogleLogin() {
 
     const redirectTarget = getPostLoginRedirect();
 
-    // Build the callback URL. We use window.location.origin so it always
-    // points to the right host (localhost:3000 in dev, real domain in prod).
-    const callbackUrl = window.location.origin + "/auth/callback.html"
+    // Always send OAuth back to the public site. If Supabase is still
+    // configured with localhost as the Site URL, it may fall back there.
+    const callbackUrl = sbPublicAuthCallbackUrl()
         + "?redirect=" + encodeURIComponent(redirectTarget);
 
     try {

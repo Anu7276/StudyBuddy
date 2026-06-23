@@ -9,6 +9,7 @@
 // It is restricted by Row Level Security on the database side.
 const SUPABASE_URL   = "https://vvtnwqxyztdvwvsfqewh.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_Rhu4YsS73R3pLhe5X3Q7KA_uOG2LSxr";
+const SB_PUBLIC_SITE_URL = "https://studybuddy-final.vercel.app";
 
 // Session expiry duration — 24 hours in milliseconds.
 const SB_SESSION_DURATION_MS = 24 * 60 * 60 * 1000;
@@ -138,6 +139,10 @@ function sbHomeUrl() {
     const depth = sbPathDepthFromRoot();
     if (depth === 0) return "index.html";
     return "../".repeat(depth) + "index.html";
+}
+
+function sbPublicAuthCallbackUrl() {
+    return SB_PUBLIC_SITE_URL + "/auth/callback.html";
 }
 
 // --------------------------------------------------------------------------

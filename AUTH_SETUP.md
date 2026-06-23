@@ -16,11 +16,10 @@ bottom.
 Go to **supabase.com → your project → Authentication**.
 
 ### a) URL Configuration (Authentication → URL Configuration)
-- **Site URL**: set this to your real deployed domain once you have one,
-  e.g. `https://studybuddy.co.in` (use `http://localhost:PORT` temporarily
-  if you're testing locally first with a local server).
+- **Site URL**: set this to your real deployed domain:
+  `https://studybuddy-final.vercel.app`
 - **Redirect URLs**: add the exact callback URL the Google button uses:
-  `https://studybuddy.co.in/auth/callback.html`
+  `https://studybuddy-final.vercel.app/auth/callback.html`
   (and also add `http://localhost:PORT/auth/callback.html` if testing
   locally — you can have multiple URLs in this list, one per line/entry).
 
