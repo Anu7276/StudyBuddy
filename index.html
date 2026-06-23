@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <meta name="description" content="studyBuddy is a 100% free, NCERT-aligned study portal offering chapter-wise notes, past year questions (PYQs), practice MCQs, and sample papers for Class 10 & 12 students.">
+    <meta property="og:title" content="studyBuddy — Free Study Material for Class 10 & 12">
+    <meta property="og:description" content="Access free NCERT-aligned notes, PYQs, MCQs, and sample papers for Class 10 and 12 on studyBuddy. Free to browse, quick sign-up to study.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>studyBuddy — Free Study Material for Class 10 & 12</title>
+</head>
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                </svg>
+            </div>
+            <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
+        </div>
+
+        <div class="oth">
+            <a href="index.html">Home</a>
+            <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[0], '10')">Class 10</a>
+            <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[1], '12')">Class 12</a>
+            <a href="#">Study Material</a>
+            <a href="#">About us</a>
+            <a href="mailto:anuragverma705a@gmail.com">Contact us</a>
+            <a href="auth/index.html" class="btn-login">Login</a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ======= HERO ======= -->
+    <section class="hero">
+        <div class="hero-bg-circle"></div>
+        <div class="hero-bg-circle2"></div>
+
+        <div class="left">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Free for all students · Quick sign-up to start
+            </div>
+            <h1>Your shortcut to <span class="gradient-text">board exam</span> success</h1>
+            <p>Free Notes, PYQs, Sample Papers, NCERT Solutions & MCQs — everything you need for Class 10 and Class 12 in one place.</p>
+
+            <div class="explore">
+                <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[0], '10')" class="btn-primary">Explore Class 10</a>
+                <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[1], '12')" class="btn-secondary">Explore Class 12</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <h2>50+</h2>
+                    <p>Notes</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h2>100+</h2>
+                    <p>PYQs</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <h2>10+</h2>
+                    <p>Subjects</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="hero-card">
+                <div class="card-header">
+                    <div class="card-avatar">SB</div>
+                    <div>
+                        <div class="card-title">Study Dashboard</div>
+                        <div class="card-sub">Pick what to study today</div>
+                    </div>
+                    <div class="card-live"><span class="live-dot"></span>Free</div>
+                </div>
+
+                <div class="card-items">
+                    <div class="item">
+                        <div class="item-icon notes-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        </div>
+                        <div class="item-text">
+                            <span>Notes</span>
+                            <small>Chapter-wise summaries</small>
+                        </div>
+                        <div class="item-arrow">→</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-icon pyq-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <div class="item-text">
+                            <span>PYQs</span>
+                            <small>Past year questions</small>
+                        </div>
+                        <div class="item-arrow">→</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-icon mcq-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div class="item-text">
+                            <span>MCQs</span>
+                            <small>Quick practice quizzes</small>
+                        </div>
+                        <div class="item-arrow">→</div>
+                    </div>
+
+                    <div class="item">
+                        <div class="item-icon sample-icon">
+                            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </div>
+                        <div class="item-text">
+                            <span>Sample Papers</span>
+                            <small>Full mock tests</small>
+                        </div>
+                        <div class="item-arrow">→</div>
+                    </div>
+                </div>
+
+                <button class="start-btn">Start Learning →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= TRUST BAR ======= -->
+    <div class="trust-bar">
+        <div class="trust-inner">
+            <div class="trust-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                NCERT aligned
+            </div>
+            <div class="trust-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                100% Free
+            </div>
+            <div class="trust-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                PDF downloads
+            </div>
+            <div class="trust-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                Mobile friendly
+            </div>
+            <div class="trust-item">
+                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Updated for 2025
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= SUBJECTS ======= -->
+    <section class="subjects-section">
+        <div class="section-header">
+            <div class="section-label">Browse by subject</div>
+            <h2>Everything covered, <span class="gradient-text">board-ready</span></h2>
+            <p>Select your class and jump straight to the subject you need to study.</p>
+        </div>
+
+        <div class="class-tabs">
+            <button class="tab active" onclick="switchTab(this,'10')">Class 10</button>
+            <button class="tab" onclick="switchTab(this,'12')">Class 12</button>
+        </div>
+
+        <div class="subjects-grid" id="subjects-grid">
+            <!-- Class 10 subjects -->
+            <div class="subject-card" data-class="10">
+                <div class="subject-icon math-icon">∑</div>
+                <h3>Mathematics</h3>
+                <p>Algebra, Geometry, Trigonometry &amp; more</p>
+                <div class="subject-meta"><span>15 chapters</span><span>80+ PYQs</span></div>
+                <a href="pages/class10/maths.html" class="subject-link">Study now →</a>
+            </div>
+            
+            <div class="subject-card has-subbooks" data-class="10">
+                <div class="subject-icon sci-icon">🧪</div>
+                <h3>Science</h3>
+                <p>Physics, Chemistry, and Biology combined</p>
+                <div class="subject-meta"><span>15 chapters</span><span>105+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class10/science.html#physics" class="subbook-item">Physics</a>
+                    <a href="pages/class10/science.html#chemistry" class="subbook-item">Chemistry</a>
+                    <a href="pages/class10/science.html#biology" class="subbook-item">Biology</a>
+                </div>
+            </div>
+
+            <div class="subject-card has-subbooks" data-class="10">
+                <div class="subject-icon eng-icon">📖</div>
+                <h3>English</h3>
+                <p>First Flight prose/poetry &amp; Footprints supplementary reader</p>
+                <div class="subject-meta"><span>17 chapters</span><span>60+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class10/english.html#firstflight" class="subbook-item">First Flight (Main Textbook)</a>
+                    <a href="pages/class10/english.html#footprints" class="subbook-item">Footprints Without Feet</a>
+                </div>
+            </div>
+
+            <div class="subject-card has-subbooks" data-class="10">
+                <div class="subject-icon sst-icon">🌍</div>
+                <h3>Social Science</h3>
+                <p>History, Civics, Geography &amp; Economics combined</p>
+                <div class="subject-meta"><span>19 chapters</span><span>90+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class10/social-science.html#history" class="subbook-item">History</a>
+                    <a href="pages/class10/social-science.html#civics" class="subbook-item">Civics</a>
+                    <a href="pages/class10/social-science.html#geography" class="subbook-item">Geography</a>
+                    <a href="pages/class10/social-science.html#economics" class="subbook-item">Economics</a>
+                </div>
+            </div>
+
+            <div class="subject-card has-subbooks" data-class="10">
+                <div class="subject-icon hin-icon">अ</div>
+                <h3>Hindi</h3>
+                <p>Kshitij main textbook &amp; Kritika supplementary reader</p>
+                <div class="subject-meta"><span>22 chapters</span><span>65+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class10/hindi.html#kshitij" class="subbook-item">Kshitij (Main Course A)</a>
+                    <a href="pages/class10/hindi.html#kritika" class="subbook-item">Kritika (Supplementary A)</a>
+                </div>
+            </div>
+
+            <div class="subject-card" data-class="10">
+                <div class="subject-icon it-icon">💻</div>
+                <h3>IT / Computer</h3>
+                <p>Communication, ICT, spreadsheets &amp; databases</p>
+                <div class="subject-meta"><span>9 chapters</span><span>30+ PYQs</span></div>
+                <a href="pages/class10/it-computer.html" class="subject-link">Study now →</a>
+            </div>
+
+            <!-- Class 12 subjects -->
+            <div class="subject-card" data-class="12" style="display:none">
+                <div class="subject-icon math-icon">∑</div>
+                <h3>Mathematics</h3>
+                <p>Calculus, Vectors, Probability &amp; more</p>
+                <div class="subject-meta"><span>13 chapters</span><span>100+ PYQs</span></div>
+                <a href="pages/class12/maths.html" class="subject-link">Study now →</a>
+            </div>
+
+            <div class="subject-card" data-class="12" style="display:none">
+                <div class="subject-icon sci-icon">⚗</div>
+                <h3>Physics</h3>
+                <p>Electrostatics, Optics, Modern Physics</p>
+                <div class="subject-meta"><span>14 chapters</span><span>95+ PYQs</span></div>
+                <a href="pages/class12/physics.html" class="subject-link">Study now →</a>
+            </div>
+
+            <div class="subject-card" data-class="12" style="display:none">
+                <div class="subject-icon sci-icon">🧪</div>
+                <h3>Chemistry</h3>
+                <p>Organic, Inorganic &amp; Physical Chemistry</p>
+                <div class="subject-meta"><span>10 chapters</span><span>90+ PYQs</span></div>
+                <a href="pages/class12/chemistry.html" class="subject-link">Study now →</a>
+            </div>
+
+            <div class="subject-card" data-class="12" style="display:none">
+                <div class="subject-icon sst-icon">🌱</div>
+                <h3>Biology</h3>
+                <p>Genetics, Ecology, Reproduction</p>
+                <div class="subject-meta"><span>13 chapters</span><span>85+ PYQs</span></div>
+                <a href="pages/class12/biology.html" class="subject-link">Study now →</a>
+            </div>
+
+            <div class="subject-card has-subbooks" data-class="12" style="display:none">
+                <div class="subject-icon eng-icon">📖</div>
+                <h3>English</h3>
+                <p>Flamingo prose/poetry &amp; Vistas supplementary reader</p>
+                <div class="subject-meta"><span>16 chapters</span><span>70+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class12/english.html#flamingo" class="subbook-item">Flamingo (Main Textbook)</a>
+                    <a href="pages/class12/english.html#vistas" class="subbook-item">Vistas (Supplementary)</a>
+                </div>
+            </div>
+
+            <div class="subject-card has-subbooks" data-class="12" style="display:none">
+                <div class="subject-icon hin-icon">अ</div>
+                <h3>Hindi</h3>
+                <p>Aroh main textbook &amp; Vitan supplementary reader</p>
+                <div class="subject-meta"><span>12 chapters</span><span>50+ PYQs</span></div>
+                <div class="subject-link">Study now ▾</div>
+                <div class="subbooks-list">
+                    <a href="pages/class12/hindi.html#aroh" class="subbook-item">Aroh (Main Textbook)</a>
+                    <a href="pages/class12/hindi.html#vitan" class="subbook-item">Vitan (Supplementary)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= HOW IT WORKS ======= -->
+    <section class="how-section">
+        <div class="section-header">
+            <div class="section-label">Simple process</div>
+            <h2>Start studying in <span class="gradient-text">3 steps</span></h2>
+        </div>
+
+        <div class="steps-row">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </div>
+                <h3>Pick your subject</h3>
+                <p>Choose your class and the subject you want to study. No account needed.</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </div>
+                <h3>Download or read</h3>
+                <p>Access notes, PYQs, and sample papers instantly — online or as a PDF.</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-icon">
+                    <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Practice & revise</h3>
+                <p>Test yourself with MCQs and track your confidence before the exam.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= TESTIMONIALS ======= -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <div class="section-label">Student reviews</div>
+            <h2>Trusted by students <span class="gradient-text">across India</span></h2>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"studyBuddy helped me score 94% in Science. The chapter-wise notes are so easy to understand compared to my textbook."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar" style="background:#dbeafe; color:#1d4ed8;">AR</div>
+                    <div>
+                        <div class="reviewer-name">Aarav Rao</div>
+                        <div class="reviewer-class">Class 10 · CBSE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"I used the PYQs section every day for a month before boards. The questions are arranged topic-wise which saved a lot of time."</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar" style="background:#dcfce7; color:#166534;">PS</div>
+                    <div>
+                        <div class="reviewer-name">Priya Sharma</div>
+                        <div class="reviewer-class">Class 12 · CBSE</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Best free resource for Class 12 Maths. The sample papers match exactly what came in my board exam. Highly recommend!"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar" style="background:#fef9c3; color:#854d0e;">RK</div>
+                    <div>
+                        <div class="reviewer-name">Rohan Kumar</div>
+                        <div class="reviewer-class">Class 12 · CBSE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= CTA BANNER ======= -->
+    <section class="cta-section">
+        <div class="cta-inner">
+            <h2>Ready to start preparing?</h2>
+            <p>Join thousands of students already using studyBuddy. It's free — no sign-up needed.</p>
+            <div class="cta-btns">
+                <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[0], '10')" class="btn-primary">Explore Class 10</a>
+                <a href="#subjects-grid" onclick="switchTab(document.querySelectorAll('.tab')[1], '12')" class="btn-white">Explore Class 12</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                    </div>
+                    <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
+                </div>
+                <p>Free study material for Class 10 & 12 students. NCERT aligned, exam focused.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Classes</h4>
+                    <a href="#">Class 10</a>
+                    <a href="#">Class 12</a>
+                    <a href="#">All Subjects</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Notes</a>
+                    <a href="#">PYQs</a>
+                    <a href="#">MCQs</a>
+                    <a href="#">Sample Papers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About us</a>
+                    <a href="mailto:anuragverma705a@gmail.com">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 studyBuddy · Made with ❤️ for students across India</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching for subjects
+        function switchTab(btn, cls) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.subject-card').forEach(card => {
+                card.style.display = card.dataset.class === cls ? 'flex' : 'none';
+                card.classList.remove('expanded'); // Collapse on tab change
+            });
+        }
+
+        // Subbooks click toggle logic
+        document.querySelectorAll('.subject-card.has-subbooks').forEach(card => {
+            card.addEventListener('click', (e) => {
+                // If clicking directly on a subbook link, allow normal navigation
+                if (e.target.closest('.subbook-item')) {
+                    return;
+                }
+                
+                e.preventDefault();
+                
+                const isExpanded = card.classList.contains('expanded');
+                
+                // Collapse other expanded cards in the active view
+                document.querySelectorAll('.subject-card.has-subbooks').forEach(c => {
+                    c.classList.remove('expanded');
+                });
+                
+                // Toggle clicked card
+                if (!isExpanded) {
+                    card.classList.add('expanded');
+                }
+            });
+        });
+
+        // Collapse cards when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.subject-card.has-subbooks')) {
+                document.querySelectorAll('.subject-card.has-subbooks').forEach(c => {
+                    c.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Mobile hamburger
+        const hamburger = document.getElementById('hamburger');
+        const oth = document.querySelector('.oth');
+        hamburger.addEventListener('click', () => {
+            oth.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

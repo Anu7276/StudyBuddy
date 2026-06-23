@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
+    <meta name="description" content="Free Class 10 IT / Computer Applications Digital Documentation (Advanced) notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <title>studyBuddy — Digital Documentation (Advanced) | IT / Computer Applications (Class 10)</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Shared Stylesheets -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/subject.css">
+    <style>
+        /* Hide real content until the auth check confirms a logged-in session,
+           so logged-out visitors never see a flash of chapter content. */
+        body.workspace-body { visibility: hidden; }
+        #auth-gate-loader {
+            visibility: visible;
+            position: fixed;
+            inset: 0;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        #auth-gate-loader .spinner {
+            width: 34px;
+            height: 34px;
+            border: 3px solid #e2e8f0;
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: auth-gate-spin 0.8s linear infinite;
+        }
+        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+    </style>
+    <!-- Auth: this page requires login. The Supabase CDN script + client
+         config MUST load before the gate check below runs. -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="../../../assets/js/supabase-client.js"></script>
+    <script>
+        (async function () {
+            try {
+                await sbRequireAuth();
+                // Logged in — reveal the real page, remove the loader, and
+                // populate the navbar email display.
+                document.documentElement.classList.add("auth-ok");
+                sbShowUserEmail();
+            } catch (e) {
+                // sbRequireAuth() already triggered a redirect to the login
+                // page; nothing else to do here.
+            }
+        })();
+    </script>
+</head>
+<body class="workspace-body">
+    <div id="auth-gate-loader">
+        <div class="spinner"></div>
+        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+            Taking longer than expected.
+            <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
+        </p>
+    </div>
+    <script>
+        // As soon as we know the user IS logged in, un-hide the page body.
+        // (Runs after the gate script above resolves successfully.)
+        document.addEventListener("DOMContentLoaded", function () {
+            const check = setInterval(function () {
+                if (document.documentElement.classList.contains("auth-ok")) {
+                    document.body.style.visibility = "visible";
+                    const loader = document.getElementById("auth-gate-loader");
+                    if (loader) loader.remove();
+                    clearInterval(check);
+                }
+            }, 30);
+
+            // Safety net: if Supabase's script failed to load (ad blocker,
+            // offline, CDN outage) or the auth check is just slow, don't
+            // leave the student staring at a spinner forever — after 6
+            // seconds, show a manual link to the login page instead.
+            setTimeout(function () {
+                if (!document.documentElement.classList.contains("auth-ok")) {
+                    const msg = document.getElementById("auth-gate-fallback-msg");
+                    if (msg) msg.style.display = "block";
+                }
+            }, 6000);
+        });
+    </script>
+<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+     years (chapters are sometimes added/removed) — verify this list against the
+     current official syllabus at cbseacademic.nic.in before the academic year starts,
+     and update this page if any chapters have changed. -->
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                </svg>
+            </div>
+            <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
+        </div>
+        <div class="oth">
+            <a href="../../../index.html">Home</a>
+            <a href="../../../index.html#subjects-grid">Class 10</a>
+            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
+            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
+        </div>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const logoutLink = document.getElementById("logout-link");
+            if (logoutLink) {
+                logoutLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    sbSignOut();
+                });
+            }
+        });
+    </script>
+
+    <!-- ======= WORKSPACE CONTAINER (single-chapter standalone page) ======= -->
+    <div class="workspace-container">
+        <main class="workspace-main" style="max-width: 1000px; margin: 0 auto; width: 100%;">
+            <div class="workspace-breadcrumbs" id="desktop-breadcrumbs">
+                <a href="../../../index.html">Home</a>
+                <span class="divider">/</span>
+                <a href="../../../index.html#subjects-grid">Class 10</a>
+                <span class="divider">/</span>
+                <a href="../it-computer.html">IT / Computer Applications</a>
+                <span class="divider">/</span>
+                <span class="active">Digital Documentation (Advanced)</span>
+            </div>
+
+            <!-- Chapter Header -->
+            <div class="chapter-header">
+                <div class="chapter-num-badge">CH 6</div>
+                <div class="chapter-header-text">
+                    <h1>Digital Documentation (Advanced)</h1>
+                </div>
+            </div>
+
+            <!-- Study Tabs -->
+            <div class="study-tabs">
+                <button class="tab-btn active" data-tab="notes">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    Notes
+                </button>
+                <button class="tab-btn" data-tab="pyqs">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    PYQs
+                </button>
+                <button class="tab-btn" data-tab="mcqs">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    MCQs
+                </button>
+                <button class="tab-btn" data-tab="sample-papers">
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    Sample Papers
+                </button>
+            </div>
+
+            <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
+            <div class="tab-panels-content">
+                <div class="chapter-content-panel active" id="chapter-6-content" data-chapter-badge="Chapter 6" data-chapter-title="Digital Documentation (Advanced)">
+
+                    <!-- NOTES PANEL -->
+                    <div class="tab-panel active" data-panel="notes">
+                        <div class="panel-actions">
+                            <button class="btn-action btn-copy-notes">
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                </svg>
+                                Copy Notes
+                            </button>
+                            <button class="btn-action btn-print-notes">
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                </svg>
+                                Print Notes
+                            </button>
+                        </div>
+                        <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class10/it-computer/01-it-computer/chapter-06-digital-documentation-advanced/notes/ -->
+                        <div class="notes-content">
+                            <p>[Add your chapter notes here. Replace this text with the actual study content for "Digital Documentation (Advanced)".]</p>
+                        </div>
+                    </div>
+
+                    <!-- PYQS PANEL -->
+                    <div class="tab-panel" data-panel="pyqs">
+                        <div class="link-tab-container">
+                            <div class="link-card">
+                                <div class="link-icon-circle">📄</div>
+                                <h3>Chapter PYQ PDF</h3>
+                                <p>Access the curated past year board questions for this chapter.</p>
+                                <!-- ADD MATERIAL: put the PYQ PDF in /materials/class10/it-computer/01-it-computer/chapter-06-digital-documentation-advanced/pyqs/ then paste its link (or a Drive link) below -->
+                                <a href="PASTE_PYQ_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                    📄 Open PYQ PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MCQS PANEL -->
+                    <div class="tab-panel" data-panel="mcqs">
+                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        </div>
+                        <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class10/it-computer/01-it-computer/chapter-06-digital-documentation-advanced/mcqs/ -->
+                        <div class="mcq-quiz-container">
+                            <div class="mcq-question" data-correct="A">
+                                <h3 class="mcq-question-text">1. Sample question for Digital Documentation (Advanced) — replace with a real MCQ.</h3>
+                                <div class="mcq-options">
+                                    <button class="mcq-option" data-option="A">
+                                        <span class="mcq-option-prefix">A</span>
+                                        <span class="mcq-option-text">Option A (correct — update this)</span>
+                                    </button>
+                                    <button class="mcq-option" data-option="B">
+                                        <span class="mcq-option-prefix">B</span>
+                                        <span class="mcq-option-text">Option B (replace with real option)</span>
+                                    </button>
+                                    <button class="mcq-option" data-option="C">
+                                        <span class="mcq-option-prefix">C</span>
+                                        <span class="mcq-option-text">Option C (replace with real option)</span>
+                                    </button>
+                                    <button class="mcq-option" data-option="D">
+                                        <span class="mcq-option-prefix">D</span>
+                                        <span class="mcq-option-text">Option D (replace with real option)</span>
+                                    </button>
+                                </div>
+                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAMPLE PAPERS PANEL -->
+                    <div class="tab-panel" data-panel="sample-papers">
+                        <div class="link-tab-container">
+                            <div class="link-card">
+                                <div class="link-icon-circle">📄</div>
+                                <h3>Chapter Sample Paper PDF</h3>
+                                <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
+                                <!-- ADD MATERIAL: put the sample paper PDF in /materials/class10/it-computer/01-it-computer/chapter-06-digital-documentation-advanced/sample-papers/ then paste its link (or a Drive link) below -->
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                    📄 Open Sample Paper PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Prev / Next Chapter Navigation -->
+            <div class="chapter-nav-buttons">
+                <a href="chapter-05-green-skills.html" class="chapter-nav-btn prev">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <span class="nav-label">
+                        <span class="nav-eyebrow">Previous</span>
+                        <span class="nav-title">Green Skills</span>
+                    </span>
+                </a>
+                <a href="chapter-07-electronic-spreadsheet-advanced.html" class="chapter-nav-btn next">
+                    <span class="nav-label">
+                        <span class="nav-eyebrow">Next</span>
+                        <span class="nav-title">Electronic Spreadsheet (Advanced)</span>
+                    </span>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                    </div>
+                    <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
+                </div>
+                <p>Free study material for Class 10 &amp; 12 students. NCERT aligned, exam focused.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Classes</h4>
+                    <a href="../../../index.html#subjects-grid">Class 10</a>
+                    <a href="../../../index.html#subjects-grid">Class 12</a>
+                    <a href="../../../index.html#subjects-grid">All Subjects</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="#">Notes</a>
+                    <a href="#">PYQs</a>
+                    <a href="#">MCQs</a>
+                    <a href="#">Sample Papers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 studyBuddy · Made with ❤️ for students across India</p>
+        </div>
+    </footer>
+
+    <!-- Shared Logic Script -->
+    <script src="../../../assets/js/subject.js"></script>
+</body>
+</html>

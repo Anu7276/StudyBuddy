@@ -1,0 +1,14 @@
+{
+  "headers": [
+    {
+      "source": "**/*",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/auth", "destination": "/auth/index.html" }
+  ],
+  "trailingSlash": false
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <title>studyBuddy — Signing you in…</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25252b;
+            font-family: 'Inter', Arial, sans-serif;
+            color: #fff;
+        }
+        .callback-box {
+            text-align: center;
+        }
+        .spinner {
+            width: 36px;
+            height: 36px;
+            border: 3px solid rgba(255,255,255,0.25);
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .callback-error {
+            color: #fca5a5;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            max-width: 320px;
+        }
+        a.callback-link {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="callback-box">
+        <div class="spinner" id="spinner"></div>
+        <p id="callback-status">Signing you in…</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="/assets/js/supabase-client.js"></script>
+    <script>
+        (async function () {
+            const statusEl  = document.getElementById("callback-status");
+            const spinnerEl = document.getElementById("spinner");
+            const params    = new URLSearchParams(window.location.search);
+            const redirectTarget = params.get("redirect") || sbHomeUrl();
+
+            // With the PKCE auth flow (Supabase default), the SDK picks up the
+            // auth code from the URL and exchanges it for a session automatically.
+            // We poll briefly until the session is ready, then redirect.
+            let attempts = 0;
+            const maxAttempts = 20; // wait up to 10 seconds
+
+            async function waitForSession() {
+                try {
+                    const { data, error } = await sbClient.auth.getSession();
+
+                    if (error) {
+                        showError(error.message || "Authentication error. Please try again.");
+                        return;
+                    }
+
+                    if (data && data.session) {
+                        // ✅ Session confirmed — record the 24-hour login window
+                        // and send the user where they wanted to go.
+                        localStorage.setItem("sb_login_time", Date.now().toString());
+                        window.location.replace(redirectTarget);
+                        return;
+                    }
+
+                    attempts++;
+                    if (attempts < maxAttempts) {
+                        setTimeout(waitForSession, 500);
+                    } else {
+                        showError("Sign-in timed out. No session was returned by Google. Please try again.");
+                    }
+                } catch (e) {
+                    showError("Unexpected error: " + e.message);
+                }
+            }
+
+            function showError(msg) {
+                spinnerEl.style.display = "none";
+                statusEl.textContent = "We couldn't complete sign-in.";
+                const errMsg = document.createElement("p");
+                errMsg.className = "callback-error";
+                errMsg.textContent = msg;
+                statusEl.insertAdjacentElement("afterend", errMsg);
+                const backLink = document.createElement("a");
+                backLink.href = "index.html";
+                backLink.className = "callback-link";
+                backLink.textContent = "← Back to login";
+                errMsg.insertAdjacentElement("afterend", backLink);
+            }
+
+            // Small initial delay to let the SDK initialise and process the URL
+            setTimeout(waitForSession, 400);
+        })();
+    </script>
+</body>
+</html>

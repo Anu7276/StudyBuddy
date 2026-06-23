@@ -1,0 +1,11 @@
+{
+  "name": "studybuddy",
+  "version": "1.0.0",
+  "description": "studyBuddy — Free study portal for Class 10 & 12",
+  "scripts": {
+    "start": "npx serve . --listen 3000",
+    "dev": "npx serve . --listen 3000"
+  },
+  "keywords": [],
+  "license": "ISC"
+}

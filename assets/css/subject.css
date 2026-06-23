@@ -1,0 +1,1186 @@
+/* ==========================================================================
+   studyBuddy — subject.css (Shared Workspace Styles)
+   ========================================================================== */
+
+/* Layout & Structure */
+.workspace-body {
+    background-color: var(--bg-secondary, #f8fafc);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.workspace-container {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - var(--nav-h, 68px));
+    position: relative;
+}
+
+/* Hide mobile header bar by default */
+.mobile-sidebar-toggle-bar {
+    display: none;
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (Chapter List & Progress Status)
+   ========================================================================== */
+.workspace-sidebar {
+    width: 320px;
+    background: #ffffff;
+    border-right: 1px solid var(--border, #e2e8f0);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    top: var(--nav-h, 68px);
+    height: calc(100vh - var(--nav-h, 68px));
+    z-index: 10;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+    background: linear-gradient(to bottom, #ffffff, var(--bg-secondary, #f8fafc));
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary, #475569);
+    margin-bottom: 16px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.back-link:hover {
+    color: var(--blue, #2563eb);
+    transform: translateX(-3px);
+}
+
+.sidebar-header h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.25;
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+}
+
+.class-badge {
+    display: inline-block;
+    background: var(--blue-light, #eff6ff);
+    color: var(--blue-dark, #1d4ed8);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--blue-mid, #dbeafe);
+}
+
+.chapter-list-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 16px;
+}
+
+.chapter-list-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted, #94a3b8);
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+.chapter-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.chapter-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px;
+    border-radius: var(--radius-md, 12px);
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chapter-item:hover {
+    background: var(--bg-secondary, #f8fafc);
+    border-color: var(--border, #e2e8f0);
+}
+
+.chapter-item.active {
+    background: var(--blue-light, #eff6ff);
+    border-color: var(--blue-mid, #dbeafe);
+}
+
+.chapter-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.chapter-no-lbl {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--blue, #2563eb);
+}
+
+.chapter-title-lbl {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.35;
+}
+
+/* Sidebar sub-section heading (used for multi-textbook subjects: Social Science, Hindi, English) */
+.chapter-section-heading {
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: var(--text-muted, #94a3b8);
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    padding: 14px 8px 6px 8px;
+    margin-top: 6px;
+    border-top: 1px solid var(--border, #e2e8f0);
+    display: block;
+}
+.chapter-section-heading:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 4px;
+}
+
+/* Sidebar Overlay */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* ==========================================================================
+   RIGHT MAIN AREA (Workspace panels & Tabs)
+   ========================================================================== */
+.workspace-main {
+    flex: 1;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.workspace-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary, #475569);
+}
+
+.workspace-breadcrumbs a {
+    transition: color 0.2s;
+}
+
+.workspace-breadcrumbs a:hover {
+    color: var(--blue, #2563eb);
+}
+
+.workspace-breadcrumbs .divider {
+    color: var(--text-muted, #94a3b8);
+}
+
+.workspace-breadcrumbs .active {
+    color: var(--text-primary, #0f172a);
+    font-weight: 600;
+}
+
+/* Chapter Header Card */
+.chapter-header {
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-lg, 16px);
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+}
+
+.chapter-switch-header {
+    display: flex;
+}
+
+.chapter-switch-header.active {
+    display: flex;
+}
+
+.chapter-switch-header.filtered-out,
+.chapter-switch-header.filtered-out.active {
+    display: none;
+}
+
+.chapter-num-badge {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md, 12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+}
+
+.chapter-header-text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.chapter-header-text h1 {
+    font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+}
+
+.chapter-section-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--blue-dark, #1d4ed8);
+    background: var(--blue-light, #eff6ff);
+    border: 1px solid var(--blue-mid, #dbeafe);
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* ==========================================================================
+   STUDY TABS
+   ========================================================================== */
+.study-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border, #e2e8f0);
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: var(--font, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary, #475569);
+    padding: 14px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin-bottom: -2px;
+}
+
+.tab-btn svg {
+    color: var(--text-muted, #94a3b8);
+    transition: color 0.2s;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary, #0f172a);
+}
+
+.tab-btn.active {
+    color: var(--blue, #2563eb);
+    border-bottom-color: var(--blue, #2563eb);
+}
+
+.tab-btn.active svg {
+    color: var(--blue, #2563eb);
+}
+
+/* Tab Panels */
+.tab-panels-content {
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-lg, 16px);
+    min-height: 380px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+    position: relative;
+}
+
+.chapter-content-panel {
+    display: none;
+}
+
+.chapter-content-panel.active {
+    display: block;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   PANEL: NOTES
+   ========================================================================== */
+.panel-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border, #e2e8f0);
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-secondary, #f8fafc);
+    color: var(--text-secondary, #475569);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-sm, 8px);
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    background: var(--blue-light, #eff6ff);
+    color: var(--blue, #2563eb);
+    border-color: var(--blue-mid, #dbeafe);
+}
+
+.notes-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-primary, #0f172a);
+}
+
+.notes-content p {
+    margin-bottom: 20px;
+}
+
+.notes-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   PANEL: PYQS / SAMPLE PAPERS (LINKS)
+   ========================================================================== */
+.link-tab-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    text-align: center;
+    padding: 20px;
+}
+
+.link-card {
+    background: var(--bg-secondary, #f8fafc);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-lg, 16px);
+    padding: 40px;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-icon-circle {
+    width: 68px;
+    height: 68px;
+    background: var(--blue-light, #eff6ff);
+    color: var(--blue, #2563eb);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.link-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary, #0f172a);
+}
+
+.link-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary, #475569);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.resource-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--blue, #2563eb);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border-radius: var(--radius-md, 12px);
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.25);
+}
+
+.resource-btn:hover {
+    background: var(--blue-dark, #1d4ed8);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PANEL: MCQS
+   ========================================================================== */
+.mcq-quiz-container {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.mcq-score-container {
+    max-width: 650px;
+    margin: 0 auto 20px;
+}
+
+.mcq-question {
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-lg, 16px);
+    padding: 24px;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+}
+
+.mcq-question-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.45;
+    margin-bottom: 20px;
+}
+
+.mcq-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mcq-option {
+    width: 100%;
+    text-align: left;
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-md, 12px);
+    padding: 14px 18px;
+    font-family: var(--font, 'Inter', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-primary, #0f172a);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.mcq-option:hover:not(:disabled) {
+    border-color: var(--blue-mid, #dbeafe);
+    background-color: var(--blue-light, #eff6ff);
+    transform: translateX(4px);
+}
+
+.mcq-option-prefix {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary, #f1f5f9);
+    color: var(--text-secondary, #475569);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.mcq-option:hover:not(:disabled) .mcq-option-prefix {
+    background-color: var(--blue-mid, #dbeafe);
+    color: var(--blue-dark, #1d4ed8);
+}
+
+.mcq-option.correct {
+    background-color: #dcfce7;
+    border-color: #86efac;
+    color: #15803d;
+    font-weight: 600;
+}
+
+.mcq-option.correct .mcq-option-prefix {
+    background-color: #15803d;
+    color: #ffffff;
+}
+
+.mcq-option.incorrect {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+    color: #b91c1c;
+}
+
+.mcq-option.incorrect .mcq-option-prefix {
+    background-color: #b91c1c;
+    color: #ffffff;
+}
+
+.mcq-option:disabled {
+    cursor: not-allowed;
+}
+
+.mcq-feedback {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm, 8px);
+}
+
+.mcq-feedback.correct {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.mcq-feedback.incorrect {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* ==========================================================================
+   CHAPTER LIST PAGE (Standalone subject page — no sidebar, links out to
+   individual chapter pages instead of switching panels in-place)
+   ========================================================================== */
+.list-page-main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px 5% 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.list-page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list-page-header h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+    font-weight: 800;
+    color: var(--text-primary, #0f172a);
+    letter-spacing: -0.5px;
+}
+
+.list-page-header p {
+    font-size: 1rem;
+    color: var(--text-secondary, #475569);
+    max-width: 640px;
+}
+
+.list-page-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.list-page-stat {
+    background: var(--blue-light, #eff6ff);
+    color: var(--blue-dark, #1d4ed8);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--blue-mid, #dbeafe);
+}
+
+/* Section group heading on the list page (e.g. "First Flight — Poems") */
+.list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.list-section-heading {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-primary, #0f172a);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border, #e2e8f0);
+}
+
+.list-chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+}
+
+.list-chapter-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-lg, 16px);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.08));
+    transition: all 0.2s ease;
+}
+
+.list-chapter-card:hover {
+    border-color: var(--blue-mid, #dbeafe);
+    box-shadow: var(--shadow-md, 0 4px 16px rgba(0,0,0,0.08));
+    transform: translateY(-2px);
+}
+
+.list-chapter-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.list-chapter-no {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--blue, #2563eb);
+}
+
+.list-chapter-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary, #0f172a);
+    line-height: 1.35;
+}
+
+/* ==========================================================================
+   CHAPTER PAGE: PREV / NEXT NAVIGATION
+   ========================================================================== */
+.chapter-nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.chapter-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--radius-md, 12px);
+    padding: 12px 18px;
+    font-family: var(--font, 'Inter', sans-serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary, #0f172a);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    max-width: 46%;
+}
+
+.chapter-nav-btn:hover {
+    border-color: var(--blue-mid, #dbeafe);
+    background: var(--blue-light, #eff6ff);
+    color: var(--blue-dark, #1d4ed8);
+}
+
+.chapter-nav-btn.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.chapter-nav-btn .nav-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    overflow: hidden;
+}
+
+.chapter-nav-btn.next .nav-label {
+    align-items: flex-end;
+}
+
+.chapter-nav-btn .nav-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--text-muted, #94a3b8);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.chapter-nav-btn .nav-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES (Mobile Side Drawer)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .oth {
+        display: none;
+        position: fixed;
+        top: var(--nav-h, 68px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 20px;
+        overflow-y: auto;
+        z-index: 99;
+        border-top: 1px solid var(--border, #e2e8f0);
+    }
+
+    .oth.open {
+        display: flex;
+    }
+
+    .oth a {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+
+    #user-email-display {
+        display: block;
+        width: 100%;
+        max-width: none !important;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--border, #e2e8f0);
+        margin-bottom: 4px;
+    }
+
+    .oth a.btn-login {
+        margin-top: 8px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .workspace-container {
+        flex-direction: column;
+    }
+
+    .mobile-sidebar-toggle-bar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #ffffff;
+        border-bottom: 1px solid var(--border, #e2e8f0);
+        padding: 12px 5%;
+        position: sticky;
+        top: var(--nav-h, 68px);
+        z-index: 8;
+    }
+
+    .btn-mobile-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--blue, #2563eb);
+        color: #ffffff;
+        border: none;
+        border-radius: var(--radius-sm, 8px);
+        padding: 8px 14px;
+        font-family: var(--font, 'Inter', sans-serif);
+        font-size: 0.85rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(37,99,235,0.2);
+    }
+
+    .btn-mobile-toggle:hover {
+        background: var(--blue-dark, #1d4ed8);
+    }
+
+    .mobile-breadcrumb {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-secondary, #475569);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Transform Sidebar to Slide-in Drawer */
+    .workspace-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 280px;
+        transform: translateX(-100%);
+        z-index: 100;
+        box-shadow: var(--shadow-lg, 0 12px 40px rgba(0,0,0,0.1));
+    }
+
+    .workspace-sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay.open {
+        display: block;
+        opacity: 1;
+    }
+
+    .workspace-main {
+        padding: 16px 4% 40px;
+        gap: 16px;
+    }
+
+    #desktop-breadcrumbs {
+        display: none;
+    }
+
+    .chapter-header {
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .chapter-num-badge {
+        width: 44px;
+        height: 44px;
+        font-size: 0.85rem;
+    }
+
+    .chapter-header-text {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* ── Make study tabs sticky so they stay on screen when scrolling ── */
+    .study-tabs {
+        position: sticky;
+        top: var(--nav-h, 68px);
+        background: #ffffff;
+        z-index: 7;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        border-radius: 0;
+        padding: 0 4%;
+        margin: 0 -4%;          /* bleed edge-to-edge */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;  /* Firefox */
+    }
+    .study-tabs::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+    /* Slightly bigger tap targets for tab buttons on touch */
+    .tab-btn {
+        font-size: 0.85rem;
+        padding: 14px 14px;
+        gap: 6px;
+        min-width: 80px;
+        justify-content: center;
+    }
+    .tab-btn svg { width: 16px; height: 16px; }
+
+    .tab-panels-content {
+        padding: 20px 16px;
+        min-height: 300px;
+        border-radius: var(--radius-md, 12px);
+    }
+
+    /* Compact MCQ options for touch */
+    .mcq-question { padding: 18px 14px; }
+    .mcq-option   { padding: 12px 14px; font-size: 0.9rem; }
+
+    /* Make link cards full-width */
+    .link-card { padding: 24px 16px; }
+
+    /* ── Standalone chapter-list page (no sidebar) ── */
+    .list-page-main {
+        padding: 24px 4% 48px;
+        gap: 22px;
+    }
+    .list-chapter-grid {
+        grid-template-columns: 1fr;
+    }
+    .list-page-stats {
+        gap: 8px;
+    }
+
+    /* ── Chapter page navbar / breadcrumb spacing on a standalone page ── */
+    .workspace-main {
+        padding: 24px 4% 40px;
+        gap: 20px;
+    }
+
+    /* ── Prev/Next chapter nav buttons ── */
+    .chapter-nav-btn {
+        padding: 10px 14px;
+        max-width: 48%;
+    }
+    .chapter-nav-btn .nav-title {
+        max-width: 120px;
+        font-size: 0.82rem;
+    }
+    .chapter-nav-btn .nav-eyebrow {
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 16px;
+    }
+    .logo-text {
+        font-size: 1.1rem;
+    }
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .logo-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* Extra compact for very small phones */
+    .study-tabs {
+        padding: 0 16px;
+        margin: 0 -16px;
+    }
+    .tab-btn {
+        font-size: 0.78rem;
+        padding: 12px 10px;
+        min-width: 68px;
+    }
+    .tab-btn svg { display: none; }  /* hide icons to save space on tiny screens */
+
+    .chapter-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .chapter-header-text h1 {
+        font-size: 1.05rem;
+    }
+    .mcq-question-text { font-size: 1rem; }
+    .link-card { padding: 20px 12px; }
+    .link-icon-circle { width: 52px; height: 52px; font-size: 1.4rem; }
+
+    /* ── Standalone chapter-list page on very small phones ── */
+    .list-page-header h1 { font-size: 1.4rem; }
+    .list-page-header p { font-size: 0.9rem; }
+    .list-page-stat { font-size: 0.72rem; padding: 5px 10px; }
+    .list-chapter-card { padding: 14px 16px; }
+    .list-section-heading { font-size: 0.95rem; }
+
+    /* ── Prev/Next: stack labels tighter, allow text to wrap less ── */
+    .chapter-nav-buttons { gap: 8px; }
+    .chapter-nav-btn {
+        flex: 1;
+        max-width: 50%;
+        padding: 10px 10px;
+        gap: 6px;
+        justify-content: center;
+    }
+    .chapter-nav-btn .nav-title { max-width: 90px; }
+    .chapter-nav-btn.prev .nav-label,
+    .chapter-nav-btn.next .nav-label {
+        align-items: center;
+    }
+}
+
+/* ==========================================================================
+   PRINT LAYOUT TEMPLATE
+   ========================================================================== */
+/* Book filters inside sidebar for multi-textbook subjects */
+.book-filters {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    background: var(--bg-secondary, #f8fafc);
+    padding: 4px;
+    border-radius: var(--radius-sm, 8px);
+    border: 1px solid var(--border, #e2e8f0);
+}
+
+.book-section-labels {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.book-section-labels span {
+    flex: 1;
+    background: #eef6ff;
+    color: #0f172a;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.book-filter-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    font-family: var(--font, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-secondary, #475569);
+    padding: 6px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
+
+.book-filter-btn.active {
+    background: #ffffff;
+    color: var(--blue, #2563eb);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+}
+
+.book-filter-btn:hover:not(.active) {
+    color: var(--text-primary, #0f172a);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+@media print {
+    body, html {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+    }
+
+    /* Hide everything except active notes content */
+    .navbar,
+    .mobile-sidebar-toggle-bar,
+    .workspace-sidebar,
+    .sidebar-overlay,
+    #desktop-breadcrumbs,
+    .study-tabs,
+    .panel-actions,
+    .tab-panel:not(.active),
+    .tab-panel[data-panel="pyqs"],
+    .tab-panel[data-panel="mcqs"],
+    .tab-panel[data-panel="sample-papers"],
+    .chapter-nav-buttons,
+    .hamburger,
+    .footer {
+        display: none !important;
+    }
+
+    .workspace-container,
+    .workspace-main,
+    .tab-panels-content,
+    .chapter-content-panel.active,
+    .tab-panel[data-panel="notes"].active {
+        display: block !important;
+        position: static !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+    .chapter-header {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 0 15px 0 !important;
+        margin-bottom: 24px !important;
+        border-bottom: 2px solid #000000 !important;
+        display: flex !important;
+    }
+
+    .chapter-num-badge {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border: 1px solid #000000 !important;
+        box-shadow: none !important;
+    }
+
+    .notes-content {
+        color: #000000 !important;
+        line-height: 1.6 !important;
+    }
+}
