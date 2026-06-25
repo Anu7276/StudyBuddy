@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 10 English Amanda! notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 10 English Amanda! notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — Amanda! | English (Class 10)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 10</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -151,46 +168,89 @@
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-16-content" data-chapter-badge="Poem 6" data-chapter-title="Amanda!">
+                <div class="chapter-content-panel active" id="chapter-16-content" data-chapter-badge="Poem 6"
+                    data-chapter-title="Amanda!">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this poem's notes text below, or link a PDF from /materials/class10/english/01b-first-flight-poems/poem-06-amanda/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your poem notes here. Replace this text with the actual study content for "Amanda!".]</p>
+                            <h3>Poem Summary</h3>
+                            <p>The poem is structured as a one-sided conversation: an unnamed adult voice — almost
+                                certainly a parent — repeatedly criticizes and corrects Amanda for small, everyday
+                                things like slouching, biting her nails, dragging her feet, and being late, treating
+                                each one as a minor offence that needs immediate correcting. Interrupting this stream of
+                                nagging are Amanda's own private thoughts, where she imagines herself as a mermaid
+                                swimming freely underwater, or as Rapunzel, locked away in a tower yet strangely content
+                                in that imagined solitude, or simply as herself, "Amanda," left alone without anyone
+                                telling her what to do or how to behave.</p>
+                            <p>Each of Amanda's daydreams shares a common thread: in every imagined scenario, she finds
+                                some form of peace, freedom, or escape from the relentless correction she experiences in
+                                real life. Even the seemingly sad image of Rapunzel locked in a tower is described as
+                                preferable to her actual situation, since at least in that fantasy, she is left alone.
+                                The contrast between the nagging adult voice and Amanda's quiet, persistent daydreams
+                                creates a portrait of a child quietly retreating into her own mind as the only available
+                                space where she isn't being criticized.</p>
+
+                            <h3>Theme</h3>
+                            <p>The poem is about a child's deep need for freedom, privacy, and individuality in the face
+                                of constant adult criticism and control — and about how imagination becomes the only
+                                real escape available to her when that need isn't being met in real life.</p>
+
+                            <h3>Message for Students</h3>
+                            <p>The poem is a gentle but pointed reminder, aimed as much at adults as at young readers,
+                                that constant nagging and criticism often pushes children toward withdrawal and
+                                daydreaming rather than genuine improvement. It suggests that everyone, including
+                                children, needs some space simply to exist without being corrected at every turn.</p>
                         </div>
                     </div>
 
@@ -211,13 +271,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class10/english/01b-first-flight-poems/poem-06-amanda/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for Amanda! — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for Amanda! — replace with a real MCQ.
+                                </h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +299,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +314,8 @@
                                 <h3>Poem Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this poem.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class10/english/01b-first-flight-poems/poem-06-amanda/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +328,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="poem-05-the-ball-poem.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">The Ball Poem</span>
@@ -273,7 +342,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">Animals</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +358,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +397,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>
