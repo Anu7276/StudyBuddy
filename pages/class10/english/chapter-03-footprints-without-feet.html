@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 10 English Footprints without Feet notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 10 English Footprints without Feet notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — Footprints without Feet | English (Class 10)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 10</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -144,53 +161,164 @@
             <div class="chapter-header">
                 <div class="chapter-num-badge">CH 3</div>
                 <div class="chapter-header-text">
-                    <h1>Footprints without Feet <span class="chapter-section-tag">Footprints without Feet — Prose</span></h1>
+                    <h1>Footprints without Feet <span class="chapter-section-tag">Footprints without Feet — Prose</span>
+                    </h1>
                 </div>
             </div>
 
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-24-content" data-chapter-badge="Chapter 3" data-chapter-title="Footprints without Feet">
+                <div class="chapter-content-panel active" id="chapter-24-content" data-chapter-badge="Chapter 3"
+                    data-chapter-title="Footprints without Feet">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class10/english/02-footprints-without-feet/chapter-03-footprints-without-feet/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your chapter notes here. Replace this text with the actual study content for "Footprints without Feet".]</p>
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>Footprints Without Feet</strong> is an exciting science fiction story written by
+                                H.G. Wells. It tells the story of a brilliant scientist named <strong>Griffin</strong>,
+                                who discovers the secret of becoming invisible. Although Griffin is highly intelligent,
+                                he misuses his knowledge for selfish purposes. The story teaches that intelligence
+                                without good values can become dangerous and harmful to society.</p>
+
+                            <p>Griffin was a talented scientist who spent many years studying science and conducting
+                                experiments. After a lot of hard work, he discovered a chemical formula that could make
+                                the human body invisible. He successfully tested the experiment on himself and became
+                                completely invisible. At first, Griffin felt proud of his achievement because no one
+                                else had ever discovered such a thing.</p>
+
+                            <p>However, Griffin soon realized that being invisible also created many difficulties. Since
+                                people could not see him, they accidentally bumped into him while walking on the
+                                streets. During winter, he could not wear clothes because the clothes remained visible
+                                even though his body was invisible. Without clothes, he felt extremely cold. He also
+                                could not eat food in public because the food could be seen moving inside his body until
+                                it was fully digested. Thus, his great scientific discovery became more of a problem
+                                than a blessing.</p>
+
+                            <p>Griffin was not a kind or honest person. Instead of using his discovery to help others or
+                                contribute to society, he decided to misuse his invisibility. He believed that nobody
+                                could catch him, so he started committing crimes without fear.</p>
+
+                            <p>One day, Griffin entered a large department store in London. Since he was invisible, he
+                                freely walked around the store without anyone noticing him. He wore warm clothes, shoes,
+                                and an overcoat to protect himself from the cold. He also ate food from the store
+                                without paying for it. Feeling tired, he decided to sleep inside the store during the
+                                night.</p>
+
+                            <p>Early the next morning, the shop assistants discovered signs that someone had stayed
+                                inside the store. Griffin quickly escaped, but he had to remove all his stolen clothes
+                                before running away because the clothes made him visible. Once again, he became
+                                invisible but had to face the freezing cold weather.</p>
+
+                            <p>To escape the cold, Griffin secretly entered a house occupied by a theatrical company.
+                                Inside, he found clothes, blankets, food, and money. Instead of behaving honestly, he
+                                stole everything he needed. Before leaving, he even set the house on fire to hide the
+                                evidence of his crime. This act showed that Griffin had become cruel, selfish, and
+                                irresponsible.</p>
+
+                            <p>Later, Griffin travelled to the village of Iping. To hide his invisible body, he rented
+                                two rooms at an inn called <strong>The Coach and Horses</strong>. He wrapped himself
+                                completely with bandages, wore dark glasses, a fake nose, gloves, a large hat, and heavy
+                                clothes. Because of his strange appearance, the villagers became curious and suspicious.
+                                Griffin rarely came out of his room and spent most of his time working on his scientific
+                                experiments.</p>
+
+                            <p>One day, the landlord's wife entered Griffin's room to clean it. At that moment, Griffin
+                                had removed some of his clothes and become partly invisible. To frighten her away, he
+                                pretended that his furniture was moving by itself. The woman became terrified and ran
+                                out of the room screaming. Soon, people in the village started believing that the room
+                                was haunted by ghosts.</p>
+
+                            <p>Later, Griffin's landlord wanted to question him about the unusual incidents happening in
+                                the inn. A police officer was also called to investigate. Griffin became angry and
+                                decided to escape. He suddenly removed all his clothes, making himself completely
+                                invisible again. The police officer and the villagers could no longer see him. Griffin
+                                pushed them aside, knocked them down, and escaped successfully.</p>
+
+                            <p>After leaving the inn, Griffin continued wandering through the village. Since he had no
+                                money, he secretly entered the house of a clergyman. He stole cash from the house
+                                without anyone noticing. The next morning, the clergyman and his wife discovered that
+                                the money had disappeared, but they could not understand how the theft had taken place.
+                            </p>
+
+                            <p>While escaping from the village, Griffin was followed by a curious boy. Griffin quietly
+                                removed the boy's shoes and attacked him to prevent him from raising an alarm. Although
+                                Griffin possessed one of the greatest scientific discoveries ever made, he used his
+                                knowledge only for stealing, cheating, frightening innocent people, and escaping from
+                                the police.</p>
+
+                            <p>The story clearly shows that Griffin's intelligence could not make him a good person.
+                                Instead of becoming a respected scientist, he became a criminal because he lacked
+                                honesty, kindness, and responsibility. His invisibility gave him power, but he failed to
+                                use that power wisely.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The story focuses on the responsible use of science and technology. It teaches that
+                                scientific discoveries should be used for the benefit of humanity, not for selfish or
+                                criminal purposes. The chapter also highlights the dangers of greed, misuse of power,
+                                and lack of moral values. Intelligence without honesty can become harmful to both the
+                                individual and society.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that knowledge is meaningful only when it is used for good
+                                purposes. Power, intelligence, and talent should always be guided by honesty, kindness,
+                                and responsibility. We should never misuse our abilities to harm others or gain unfair
+                                advantages. True success comes from good character, respect for others, and using our
+                                knowledge to help society instead of causing fear or destruction.</p>
                         </div>
                     </div>
 
@@ -211,13 +339,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class10/english/02-footprints-without-feet/chapter-03-footprints-without-feet/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for Footprints without Feet — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for Footprints without Feet — replace
+                                    with a real MCQ.</h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +367,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +382,8 @@
                                 <h3>Chapter Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class10/english/02-footprints-without-feet/chapter-03-footprints-without-feet/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +396,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="chapter-02-the-thiefs-story.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">The Thief&#x27;s Story</span>
@@ -273,7 +410,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">The Making of a Scientist</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +426,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +465,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>

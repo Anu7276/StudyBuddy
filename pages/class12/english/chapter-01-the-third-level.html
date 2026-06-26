@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 12 English The Third Level notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 12 English The Third Level notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — The Third Level | English (Class 12)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 12</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -151,46 +168,149 @@
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-14-content" data-chapter-badge="Chapter 1" data-chapter-title="The Third Level">
+                <div class="chapter-content-panel active" id="chapter-14-content" data-chapter-badge="Chapter 1"
+                    data-chapter-title="The Third Level">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class12/english/02-vistas/chapter-01-the-third-level/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your chapter notes here. Replace this text with the actual study content for "The Third Level".]</p>
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>The Third Level</strong> is a fascinating story written by <strong>Jack
+                                    Finney</strong>. It is a blend of reality and fantasy that explores the human desire
+                                to escape from the stress, fear, and worries of modern life. The story revolves around a
+                                man named <strong>Charley</strong>, who believes he has discovered a mysterious third
+                                level at Grand Central Station in New York. Through this unusual experience, the author
+                                shows how people often dream of escaping to a peaceful and happier world when life
+                                becomes difficult.</p>
+
+                            <p>Charley is a thirty-one-year-old man who lives in New York City with his wife, Louisa.
+                                Like many people, he has a regular job and leads a normal life. However, the modern
+                                world is full of tension, insecurity, competition, and fear, especially because of wars
+                                and other problems. Charley often feels tired and mentally disturbed by the fast-moving
+                                and stressful life around him.</p>
+
+                            <p>One evening, while returning home from work, Charley enters <strong>Grand Central
+                                    Station</strong>, one of the busiest railway stations in New York. Normally, the
+                                station has only two levels. However, Charley accidentally finds himself on what appears
+                                to be a mysterious <strong>third level</strong>. Everything around him looks completely
+                                different from the modern world.</p>
+
+                            <p>On the third level, Charley notices that the station looks old-fashioned, just like it
+                                did in the year <strong>1894</strong>. The people are dressed in nineteenth-century
+                                clothes. Men are wearing long coats, black hats, and handlebar moustaches, while women
+                                are dressed in long skirts and elegant dresses. The station is lit by gas lamps instead
+                                of electric lights. There are old-style ticket counters, brass spittoons, and steam
+                                locomotives instead of modern trains. Even the newspapers sold at the station carry old
+                                dates and cost only a few cents.</p>
+
+                            <p>Charley is amazed by everything he sees. He realizes that he has somehow travelled back
+                                in time to the year 1894. He remembers that life during that period was peaceful,
+                                simple, and free from the worries of the modern world. There were no world wars, nuclear
+                                weapons, or the fast-paced lifestyle that troubles people today.</p>
+
+                            <p>Charley decides to buy two tickets to <strong>Galesburg, Illinois</strong>, a small town
+                                where life was quiet and comfortable. He wants to take his wife Louisa there and spend
+                                the rest of their lives in peace. However, when he offers modern currency to the ticket
+                                clerk, the clerk refuses to accept it because the money belongs to a future time. The
+                                clerk asks for old-style currency that was used in 1894. Since Charley does not have
+                                such money, he is unable to buy the tickets.</p>
+
+                            <p>After returning to the present, Charley exchanges three hundred dollars of modern
+                                currency for old-style currency, hoping to visit the third level again and buy the
+                                tickets. He searches Grand Central Station many times but never finds the mysterious
+                                third level again. It seems to have disappeared completely.</p>
+
+                            <p>Charley discusses his strange experience with his friend <strong>Sam Weiner</strong>, who
+                                is a psychiatrist. Sam believes that Charley is simply trying to escape from the
+                                pressures of modern life. According to Sam, the third level exists only in Charley's
+                                imagination. He explains that people often create imaginary worlds when they become
+                                unhappy or stressed.</p>
+
+                            <p>Although Charley cannot prove that the third level is real, he continues believing that
+                                it truly exists. One day, while checking his collection of old stamps, Charley discovers
+                                a surprising letter addressed to him. The letter is written by Sam Weiner and is dated
+                                <strong>18 July 1894</strong>. In the letter, Sam says that he has successfully reached
+                                Galesburg through the third level and is enjoying a peaceful, happy life there. He
+                                encourages Charley and Louisa to keep searching because the third level really exists.
+                            </p>
+
+                            <p>This letter creates a mystery because Sam had earlier dismissed Charley's story as
+                                imagination. Now, it appears that Sam himself found the third level and travelled to the
+                                past. The story leaves readers wondering whether the third level is real or simply a
+                                symbol of humanity's desire to escape from life's difficulties.</p>
+
+                            <p>The author does not give a clear answer about the existence of the third level. Instead,
+                                he leaves the ending open for readers to interpret. Some people believe that the third
+                                level is a real time-travel experience, while others think it represents Charley's
+                                imagination and his wish to escape from the stressful modern world.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The chapter explores the themes of escapism, stress, insecurity, nostalgia, and the
+                                conflict between modern life and the peaceful past. It shows that when life becomes
+                                difficult, people often dream of escaping to a simpler and happier world. The story also
+                                blends fantasy with reality, encouraging readers to think about the importance of peace,
+                                happiness, and mental well-being.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that modern life often creates stress and anxiety, but we should
+                                learn healthy ways to deal with these challenges instead of escaping from reality. It
+                                reminds us to value peace, simplicity, and meaningful relationships. The story also
+                                encourages us to use our imagination positively while remaining responsible in real
+                                life. Finally, it shows that happiness is not found by running away from problems but by
+                                facing them with courage and maintaining a balanced life.</p>
                         </div>
                     </div>
 
@@ -211,13 +331,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class12/english/02-vistas/chapter-01-the-third-level/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for The Third Level — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for The Third Level — replace with a
+                                    real MCQ.</h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +359,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +374,8 @@
                                 <h3>Chapter Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class12/english/02-vistas/chapter-01-the-third-level/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +388,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="poem-05-aunt-jennifers-tigers.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">Aunt Jennifer&#x27;s Tigers</span>
@@ -273,7 +402,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">The Tiger King</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +418,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +457,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>

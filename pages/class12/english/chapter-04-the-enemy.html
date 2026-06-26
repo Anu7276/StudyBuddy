@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 12 English The Enemy notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 12 English The Enemy notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — The Enemy | English (Class 12)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 12</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -151,46 +168,168 @@
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-17-content" data-chapter-badge="Chapter 4" data-chapter-title="The Enemy">
+                <div class="chapter-content-panel active" id="chapter-17-content" data-chapter-badge="Chapter 4"
+                    data-chapter-title="The Enemy">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class12/english/02-vistas/chapter-04-the-enemy/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your chapter notes here. Replace this text with the actual study content for "The Enemy".]</p>
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>The Enemy</strong> is a thought-provoking story written by <strong>Pearl S.
+                                    Buck</strong>. The story is set during the time of the <strong>Second World
+                                    War</strong>, when Japan and America were enemies. It explores the conflict between
+                                professional duty, humanity, patriotism, and personal beliefs. Through the character of
+                                Dr. Sadao, the author shows that kindness and humanity are greater than hatred and war.
+                            </p>
+
+                            <p>The story revolves around <strong>Dr. Sadao Hoki</strong>, a famous Japanese surgeon and
+                                scientist. He lives with his wife, <strong>Hana</strong>, in a beautiful house near the
+                                sea. Dr. Sadao is highly respected for his medical skills and works in a hospital where
+                                he treats injured soldiers. He is also doing important research and is considered one of
+                                Japan's finest doctors.</p>
+
+                            <p>Although Dr. Sadao is a loyal Japanese citizen, he has studied medicine in America.
+                                During his stay there, he learned advanced medical techniques and gained valuable
+                                experience. He also developed respect for the American people. However, after returning
+                                to Japan, war breaks out between Japan and America, making the two countries enemies.
+                            </p>
+
+                            <p>One evening, Dr. Sadao and Hana are walking in their garden overlooking the sea.
+                                Suddenly, they notice a man lying unconscious on the beach near their house. They
+                                immediately go to help him and discover that he is a young American soldier. He has been
+                                badly wounded by a bullet and is bleeding heavily. The soldier has probably escaped from
+                                an American prison camp and reached the shore after jumping from a ship.</p>
+
+                            <p>Dr. Sadao and Hana face a difficult situation. Since the man is an enemy soldier, helping
+                                him could be considered an act of treason. If the Japanese authorities discover that
+                                they have sheltered an American prisoner, they could both be arrested or even punished
+                                severely. On the other hand, if they leave the wounded man without treatment, he will
+                                certainly die.</p>
+
+                            <p>Being a doctor, Dr. Sadao knows that saving human life is his first duty. His medical
+                                ethics do not allow him to let a patient die simply because he belongs to an enemy
+                                country. After thinking carefully, Dr. Sadao decides to take the wounded soldier into
+                                his house and perform the necessary operation.</p>
+
+                            <p>Hana also supports her husband despite being worried about the consequences. Together,
+                                they carry the unconscious soldier into their home. Their servants are shocked and
+                                unhappy. They strongly oppose helping an American because they consider him an enemy of
+                                Japan. They fear that the family will get into trouble with the police and military
+                                authorities.</p>
+
+                            <p>Ignoring everyone's objections, Dr. Sadao begins the operation. He carefully removes the
+                                bullet from the soldier's body and successfully saves his life. Hana assists him
+                                throughout the surgery, even though she feels uncomfortable at the sight of blood. The
+                                operation is successful, and the soldier slowly begins to recover.</p>
+
+                            <p>As the American soldier regains consciousness, he introduces himself as
+                                <strong>Tom</strong>. He realizes that Dr. Sadao has saved his life even though they
+                                belong to enemy nations. Tom is grateful but also understands that his presence puts the
+                                doctor's family in great danger.</p>
+
+                            <p>Meanwhile, the servants become increasingly dissatisfied. They believe that helping the
+                                enemy is wrong and eventually leave the house. Hana has to perform all the household
+                                work herself. Although this makes life difficult, neither she nor Dr. Sadao regrets
+                                saving the soldier.</p>
+
+                            <p>Dr. Sadao finally informs the <strong>General</strong>, an important military officer,
+                                about the presence of the American prisoner. The General appreciates Dr. Sadao's honesty
+                                but does not want the matter to become public. Since Dr. Sadao is an excellent surgeon
+                                who may be needed for future medical treatment, the General decides not to arrest him.
+                            </p>
+
+                            <p>The General secretly promises Dr. Sadao that he will send trusted assassins to kill the
+                                American soldier quietly. This plan would remove the prisoner without creating any
+                                public controversy. Dr. Sadao waits for several nights, but no assassins ever arrive.
+                                The General forgets his promise because he becomes busy with his own health problems.
+                            </p>
+
+                            <p>Realizing that the situation cannot continue forever, Dr. Sadao decides to help Tom
+                                escape from Japan. He secretly prepares a small boat, food, water, clothes, and a
+                                flashlight. He explains a safe route through which Tom can reach a nearby island where a
+                                Korean fishing boat may rescue him.</p>
+
+                            <p>Tom follows Dr. Sadao's instructions and successfully escapes. Every night, Dr. Sadao
+                                looks towards the island using a telescope. When he no longer sees the flashlight
+                                signal, he understands that Tom has safely escaped from Japan.</p>
+
+                            <p>Later, the General visits Dr. Sadao and apologizes for forgetting his promise to send the
+                                assassins. Dr. Sadao says nothing about Tom's escape. The General once again praises Dr.
+                                Sadao's medical skill and trusts him completely.</p>
+
+                            <p>At the end of the story, Dr. Sadao reflects on his actions. He realizes that although
+                                countries may become enemies during war, all human beings deserve kindness and
+                                compassion. As a doctor, he fulfilled his responsibility by saving a human life without
+                                considering nationality or politics. His humanity proved stronger than hatred created by
+                                war.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The story explores the themes of humanity, compassion, duty, patriotism, war, and moral
+                                responsibility. It shows the conflict between professional ethics and national loyalty.
+                                The chapter teaches that human values are more important than hatred, prejudice, or
+                                differences created by war. It also highlights the importance of kindness, courage, and
+                                making the right moral decisions even during difficult situations.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that every human life is precious, regardless of nationality,
+                                religion, or race. We should always choose kindness, compassion, and humanity over
+                                hatred and violence. Like Dr. Sadao, we should perform our duties honestly and never
+                                allow prejudice to stop us from helping someone in need. The story reminds us that true
+                                greatness lies in serving humanity and treating every person with dignity and respect.
+                            </p>
                         </div>
                     </div>
 
@@ -211,13 +350,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class12/english/02-vistas/chapter-04-the-enemy/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for The Enemy — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for The Enemy — replace with a real
+                                    MCQ.</h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +378,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +393,8 @@
                                 <h3>Chapter Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class12/english/02-vistas/chapter-04-the-enemy/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +407,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="chapter-03-journey-to-the-end-of-the-earth.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">Journey to the End of the Earth</span>
@@ -273,7 +421,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">Should Wizard Hit Mommy</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +437,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +476,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>

@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 12 English Should Wizard Hit Mommy notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 12 English Should Wizard Hit Mommy notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — Should Wizard Hit Mommy | English (Class 12)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 12</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -151,46 +168,157 @@
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-18-content" data-chapter-badge="Chapter 5" data-chapter-title="Should Wizard Hit Mommy">
+                <div class="chapter-content-panel active" id="chapter-18-content" data-chapter-badge="Chapter 5"
+                    data-chapter-title="Should Wizard Hit Mommy">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class12/english/02-vistas/chapter-05-should-wizard-hit-mommy/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your chapter notes here. Replace this text with the actual study content for "Should Wizard Hit Mommy".]</p>
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>Should Wizard Hit Mommy?</strong> is an interesting story written by <strong>John
+                                    Updike</strong>. The chapter explores the relationship between parents and children,
+                                different ways of looking at the same situation, and the importance of love, discipline,
+                                and values. The story is presented as a bedtime story told by a father, Jack, to his
+                                four-year-old daughter, Jo. Through this story, the author compares the innocent
+                                thinking of children with the mature understanding of adults.</p>
+
+                            <p>The story begins on a Saturday evening. Jack is putting his little daughter, Jo, to bed.
+                                Every evening, Jo asks her father to tell her a new story. Jack usually tells stories
+                                about a little animal named Roger, who faces some problem and then visits a wise wizard
+                                for help. Jo enjoys these stories very much because they always have interesting
+                                adventures and happy endings.</p>
+
+                            <p>On this particular evening, Jack tells Jo the story of <strong>Roger Skunk</strong>.
+                                Roger Skunk is a small skunk who has one big problem. Like all skunks, he has a bad
+                                smell. Because of his unpleasant smell, none of the other animals wants to play with
+                                him. Whenever Roger tries to make friends, the animals run away from him. Roger feels
+                                lonely, sad, and rejected because everyone avoids him.</p>
+
+                            <p>One day, Roger meets an old owl and tells him about his problem. The owl advises Roger to
+                                visit the Wizard, who is famous for solving difficult problems. Roger happily follows
+                                the owl's advice and reaches the Wizard's house deep inside the forest.</p>
+
+                            <p>The Wizard welcomes Roger kindly and asks him about his problem. Roger explains that he
+                                smells bad and wants to smell like the other animals so that they will become his
+                                friends. The Wizard agrees to help him. In return, he asks Roger to pay seven pennies.
+                                Roger does not have enough money, so the Wizard magically helps him find the required
+                                seven pennies.</p>
+
+                            <p>After receiving the payment, the Wizard waves his magic wand and changes Roger's smell
+                                from that of a skunk to the sweet fragrance of roses. Roger becomes extremely happy. As
+                                soon as he leaves the Wizard's house, all the other animals gather around him. They love
+                                his beautiful smell and happily invite him to play with them. For the first time in his
+                                life, Roger feels accepted and enjoys playing with his new friends.</p>
+
+                            <p>Later that evening, Roger returns home feeling excited. However, his mother immediately
+                                notices that something is different. She cannot smell the usual skunk smell. When Roger
+                                proudly tells her about the Wizard's magic, she becomes angry. She believes that Roger
+                                should not change his natural identity just to please others. She wants her son to
+                                remain proud of who he is.</p>
+
+                            <p>Roger's mother takes him back to the Wizard's house. She demands that the Wizard change
+                                Roger back to his original smell. The Wizard refuses because Roger had asked for the new
+                                smell and was happy with it. Roger's mother becomes angry and hits the Wizard on the
+                                head with her umbrella. Finally, the Wizard changes Roger's smell back to the natural
+                                skunk smell.</p>
+
+                            <p>After returning home, Roger once again smells like every other skunk. Although the other
+                                animals may not want to play with him anymore, his mother is satisfied because she
+                                believes her son should accept his true identity instead of changing himself to gain
+                                others' approval.</p>
+
+                            <p>At this point, Jo becomes upset with the ending. She believes that Roger should have been
+                                allowed to keep the pleasant smell because it made him happy and helped him make
+                                friends. She thinks Roger's mother was wrong to force him to change back. Jo repeatedly
+                                asks her father why the Wizard did not hit Roger's mother when she struck him with her
+                                umbrella.</p>
+
+                            <p>Jack disagrees with Jo. He explains that Roger's mother was older, wiser, and knew what
+                                was best for her child. According to Jack, children should trust their parents because
+                                parents have more experience in life. He believes that Roger's mother wanted to teach
+                                her son an important lesson about accepting himself and not changing his identity just
+                                to please others.</p>
+
+                            <p>Jo is not fully convinced by her father's explanation. She still feels that Roger
+                                deserved to be happy and that the Wizard should have defended himself. The conversation
+                                between Jack and Jo reveals the difference between the thinking of children and adults.
+                                While children often focus on immediate happiness and fairness, adults think about
+                                responsibility, discipline, values, and long-term benefits.</p>
+
+                            <p>Throughout the story, Jack is also thinking about his own family life. His wife is
+                                expecting another child, and Jack feels that his responsibilities are increasing. This
+                                influences the way he tells the story and explains why he supports Roger's mother's
+                                decision. The story ends without giving a final answer, allowing readers to think about
+                                both viewpoints and decide which one they agree with.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The chapter explores the themes of parent-child relationships, love, discipline,
+                                identity, individuality, and different perspectives of children and adults. It
+                                highlights the conflict between a child's desire for happiness and an adult's concern
+                                for moral values and responsibility. The story also shows that people of different ages
+                                may understand the same situation in completely different ways.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that parents often make decisions because they believe those
+                                decisions are best for their children, even if children do not immediately understand
+                                them. At the same time, the story reminds parents to listen to their children's feelings
+                                and opinions with patience and understanding. True happiness comes from accepting
+                                ourselves, respecting our individuality, and maintaining open communication within the
+                                family. The chapter encourages both parents and children to understand each other's
+                                perspectives with love, trust, and mutual respect.</p>
                         </div>
                     </div>
 
@@ -211,13 +339,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class12/english/02-vistas/chapter-05-should-wizard-hit-mommy/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for Should Wizard Hit Mommy — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for Should Wizard Hit Mommy — replace
+                                    with a real MCQ.</h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +367,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +382,8 @@
                                 <h3>Chapter Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class12/english/02-vistas/chapter-05-should-wizard-hit-mommy/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +396,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="chapter-04-the-enemy.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">The Enemy</span>
@@ -273,7 +410,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">On the Face of It</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +426,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +465,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>

@@ -1,10 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
-    <meta name="description" content="Free Class 12 English The Tiger King notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
+    <meta name="description"
+        content="Free Class 12 English The Tiger King notes, PYQs, MCQs and sample paper — NCERT aligned, 100% free on studyBuddy.">
     <title>studyBuddy — The Tiger King | English (Class 12)</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +16,10 @@
     <style>
         /* Hide real content until the auth check confirms a logged-in session,
            so logged-out visitors never see a flash of chapter content. */
-        body.workspace-body { visibility: hidden; }
+        body.workspace-body {
+            visibility: hidden;
+        }
+
         #auth-gate-loader {
             visibility: visible;
             position: fixed;
@@ -26,6 +31,7 @@
             justify-content: center;
             z-index: 9999;
         }
+
         #auth-gate-loader .spinner {
             width: 34px;
             height: 34px;
@@ -34,7 +40,12 @@
             border-radius: 50%;
             animation: auth-gate-spin 0.8s linear infinite;
         }
-        @keyframes auth-gate-spin { to { transform: rotate(360deg); } }
+
+        @keyframes auth-gate-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Auth: this page requires login. The Supabase CDN script + client
          config MUST load before the gate check below runs. -->
@@ -55,10 +66,12 @@
         })();
     </script>
 </head>
+
 <body class="workspace-body">
     <div id="auth-gate-loader">
         <div class="spinner"></div>
-        <p id="auth-gate-fallback-msg" style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
+        <p id="auth-gate-fallback-msg"
+            style="display:none; margin-top: 16px; font-family: 'Inter', sans-serif; color: #475569; font-size: 0.9rem; text-align: center; max-width: 280px;">
             Taking longer than expected.
             <a href="../../../auth/index.html" style="color: #2563eb; font-weight: 600;">Click here to log in</a>.
         </p>
@@ -88,7 +101,7 @@
             }, 6000);
         });
     </script>
-<!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
+    <!-- CHAPTER LIST: Based on CBSE 2025-26 syllabus. CBSE revises syllabus most
      years (chapters are sometimes added/removed) — verify this list against the
      current official syllabus at cbseacademic.nic.in before the academic year starts,
      and update this page if any chapters have changed. -->
@@ -98,7 +111,8 @@
         <div class="logo">
             <div class="logo-icon">
                 <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                 </svg>
             </div>
             <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
@@ -106,8 +120,11 @@
         <div class="oth">
             <a href="../../../index.html">Home</a>
             <a href="../../../index.html#subjects-grid">Class 12</a>
-            <a href="../../../index.html" class="btn-login" style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span> Back to Dashboard</a>
-            <span id="user-email-display" style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
+            <a href="../../../index.html" class="btn-login"
+                style="display: inline-flex; align-items: center; gap: 6px;"><span style="font-size: 1.1rem;">←</span>
+                Back to Dashboard</a>
+            <span id="user-email-display"
+                style="font-size: 0.82rem; color: #94a3b8; max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;"></span>
             <a href="#" id="logout-link" style="display: inline-flex; align-items: center; gap: 6px;">Logout</a>
         </div>
         <!-- Mobile hamburger -->
@@ -151,46 +168,256 @@
             <!-- Study Tabs -->
             <div class="study-tabs">
                 <button class="tab-btn active" data-tab="notes">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
                     Notes
                 </button>
                 <button class="tab-btn" data-tab="pyqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 17v-2a4 4 0 014-4h4m0 0l-4-4m4 4l-4 4M5 19V5a2 2 0 012-2h6l6 6v10a2 2 0 01-2 2H7a2 2 0 01-2-2z" />
+                    </svg>
                     PYQs
                 </button>
                 <button class="tab-btn" data-tab="mcqs">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
                     MCQs
                 </button>
                 <button class="tab-btn" data-tab="sample-papers">
-                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    </svg>
                     Sample Papers
                 </button>
             </div>
 
             <!-- Tab Panels (wrapped in chapter-content-panel for MCQ-score scoping; always active since this page has exactly one chapter) -->
             <div class="tab-panels-content">
-                <div class="chapter-content-panel active" id="chapter-15-content" data-chapter-badge="Chapter 2" data-chapter-title="The Tiger King">
+                <div class="chapter-content-panel active" id="chapter-15-content" data-chapter-badge="Chapter 2"
+                    data-chapter-title="The Tiger King">
 
                     <!-- NOTES PANEL -->
                     <div class="tab-panel active" data-panel="notes">
                         <div class="panel-actions">
                             <button class="btn-action btn-copy-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m-2 4h10m-5-5v10m-5-5h10" />
                                 </svg>
                                 Copy Notes
                             </button>
                             <button class="btn-action btn-print-notes">
-                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
                                 </svg>
                                 Print Notes
                             </button>
                         </div>
                         <!-- ADD MATERIAL: paste this chapter's notes text below, or link a PDF from /materials/class12/english/02-vistas/chapter-02-the-tiger-king/notes/ -->
                         <div class="notes-content">
-                            <p>[Add your chapter notes here. Replace this text with the actual study content for "The Tiger King".]</p>
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>The Tiger King</strong> is a satirical story written by <strong>Kalki</strong>.
+                                The story is full of humour, irony, and suspense. It criticizes the foolishness of blind
+                                belief in astrology, the misuse of power by rulers, and the arrogance of people who
+                                think they can control their fate. Through the life of the Maharaja of Pratibandapuram,
+                                the author shows that no one can escape destiny.</p>
+
+                            <p>The story begins with the birth of the Maharaja of <strong>Pratibandapuram</strong>.
+                                Astrologers are invited to predict the future of the newborn prince. They make an
+                                unusual prediction that the prince will one day become a great ruler, but they also
+                                announce that he will die because of a tiger. Everyone is shocked by this prophecy.
+                                Suddenly, the ten-day-old baby speaks for the first time and asks the astrologers to
+                                explain their prediction more clearly. The astrologers are amazed because an infant
+                                speaking is impossible. They repeat that the prince's death will come from a tiger.</p>
+
+                            <p>As the prince grows up, he becomes the king of Pratibandapuram after the death of his
+                                father. He is brave, proud, and determined to prove the astrologers wrong. He decides
+                                that if a tiger is destined to kill him, he will kill every tiger before any tiger can
+                                kill him. Thus begins his lifelong mission of hunting tigers.</p>
+
+                            <p>The Maharaja becomes famous as the <strong>"Tiger King"</strong> because of his obsession
+                                with hunting. He personally shoots one tiger after another. He keeps an accurate count
+                                of the number of tigers he has killed. His goal is to kill one hundred tigers, believing
+                                that once all the tigers are dead, he will be completely safe from the prophecy.</p>
+
+                            <p>The Maharaja is so serious about tiger hunting that he forbids anyone else in his kingdom
+                                from hunting tigers. If any visitor wishes to hunt, they are not allowed to do so. Once,
+                                a British officer requests permission to hunt a tiger. The Maharaja refuses because he
+                                wants every tiger for himself. However, to maintain good relations with the British
+                                government, he sends the officer's wife expensive diamond rings as gifts. The officer
+                                accepts the gifts, and the Maharaja succeeds in protecting his hunting rights.</p>
+
+                            <p>As years pass, the number of tigers in Pratibandapuram decreases. Soon, there are no more
+                                tigers left in the kingdom. The Maharaja becomes worried because he has killed only
+                                seventy tigers and still needs thirty more to reach his goal of one hundred.</p>
+
+                            <p>To continue his mission, the Maharaja decides to marry the princess of a neighbouring
+                                state because that kingdom has many tigers in its forests. After marriage, he frequently
+                                visits his father-in-law's forests and continues hunting. Gradually, he kills
+                                ninety-nine tigers. Only one tiger remains before he can complete his mission.</p>
+
+                            <p>The Maharaja searches everywhere for the hundredth tiger but cannot find one. At the same
+                                time, the royal astrologer reminds him that danger still exists until the last tiger is
+                                killed. The Maharaja becomes impatient and angry because his life depends on finding one
+                                more tiger.</p>
+
+                            <p>Seeing the king's frustration, the Dewan (Chief Minister) decides to help. He secretly
+                                buys an old tiger from a circus and releases it into the forest where the Maharaja is
+                                hunting. When the Maharaja sees the tiger, he immediately shoots at it. The tiger falls
+                                to the ground without moving. Believing that the tiger is dead, the Maharaja proudly
+                                announces that he has finally killed his hundredth tiger.</p>
+
+                            <p>However, the truth is different. The Maharaja's bullet does not actually kill the tiger.
+                                It merely frightens the animal, causing it to collapse. Later, the hunters discover that
+                                the tiger is still alive. Fearing the Maharaja's anger, they secretly shoot and kill the
+                                tiger themselves. They then bring its body to the palace. The Maharaja remains unaware
+                                that he did not kill the hundredth tiger himself.</p>
+
+                            <p>Feeling victorious, the Maharaja believes that he has defeated fate forever. He
+                                celebrates his achievement and no longer worries about the astrologers' prediction.
+                                However, destiny has planned something unexpected.</p>
+
+                            <p>A few days later, the Maharaja visits a toy shop to buy a birthday gift for his little
+                                son. He purchases a small wooden tiger made by an unskilled carpenter. The toy has rough
+                                wooden edges and tiny splinters sticking out of it.</p>
+
+                            <p>While playing with his son, the Maharaja accidentally gets a tiny wooden splinter from
+                                the toy tiger stuck in his right hand. At first, he ignores the small injury because it
+                                appears harmless. However, the wound soon becomes infected. His hand swells badly, and
+                                his condition becomes serious.</p>
+
+                            <p>The best surgeons are called to perform an operation on the Maharaja. Although the
+                                surgery appears successful, the doctors are unable to save his life. The Maharaja dies
+                                because of the infection caused by the tiny wooden splinter from the toy tiger.</p>
+
+                            <p>In the end, the astrologers' prophecy comes true. Ironically, the Maharaja is not killed
+                                by a real tiger but by a wooden toy tiger. Despite killing ninety-nine real tigers and
+                                believing he had defeated destiny, he cannot escape his fate. The story ends with deep
+                                irony, showing that no one can change what is destined to happen.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The chapter explores the themes of fate, destiny, arrogance, misuse of power,
+                                superstition, and irony. It criticizes blind faith in astrology, excessive pride, and
+                                the irresponsible killing of wildlife. The story also highlights that no person, no
+                                matter how powerful, can escape destiny. Through satire and humour, the author exposes
+                                the foolish decisions made by those in authority.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that power and wealth cannot protect anyone from fate. We should
+                                never become arrogant or misuse our authority for personal desires. Blind belief in
+                                predictions should not control our lives, and we should respect nature instead of
+                                destroying it. The story also reminds us that true wisdom lies in humility,
+                                responsibility, and accepting that some things in life are beyond human control.</p>
+                        </div>
+                        <div class="notes-content">
+                            <h3>Chapter Summary</h3>
+
+                            <p><strong>The Tiger King</strong> is a satirical story written by <strong>Kalki</strong>.
+                                The story is full of humour, irony, and suspense. It criticizes the foolishness of blind
+                                belief in astrology, the misuse of power by rulers, and the arrogance of people who
+                                think they can control their fate. Through the life of the Maharaja of Pratibandapuram,
+                                the author shows that no one can escape destiny.</p>
+
+                            <p>The story begins with the birth of the Maharaja of <strong>Pratibandapuram</strong>.
+                                Astrologers are invited to predict the future of the newborn prince. They make an
+                                unusual prediction that the prince will one day become a great ruler, but they also
+                                announce that he will die because of a tiger. Everyone is shocked by this prophecy.
+                                Suddenly, the ten-day-old baby speaks for the first time and asks the astrologers to
+                                explain their prediction more clearly. The astrologers are amazed because an infant
+                                speaking is impossible. They repeat that the prince's death will come from a tiger.</p>
+
+                            <p>As the prince grows up, he becomes the king of Pratibandapuram after the death of his
+                                father. He is brave, proud, and determined to prove the astrologers wrong. He decides
+                                that if a tiger is destined to kill him, he will kill every tiger before any tiger can
+                                kill him. Thus begins his lifelong mission of hunting tigers.</p>
+
+                            <p>The Maharaja becomes famous as the <strong>"Tiger King"</strong> because of his obsession
+                                with hunting. He personally shoots one tiger after another. He keeps an accurate count
+                                of the number of tigers he has killed. His goal is to kill one hundred tigers, believing
+                                that once all the tigers are dead, he will be completely safe from the prophecy.</p>
+
+                            <p>The Maharaja is so serious about tiger hunting that he forbids anyone else in his kingdom
+                                from hunting tigers. If any visitor wishes to hunt, they are not allowed to do so. Once,
+                                a British officer requests permission to hunt a tiger. The Maharaja refuses because he
+                                wants every tiger for himself. However, to maintain good relations with the British
+                                government, he sends the officer's wife expensive diamond rings as gifts. The officer
+                                accepts the gifts, and the Maharaja succeeds in protecting his hunting rights.</p>
+
+                            <p>As years pass, the number of tigers in Pratibandapuram decreases. Soon, there are no more
+                                tigers left in the kingdom. The Maharaja becomes worried because he has killed only
+                                seventy tigers and still needs thirty more to reach his goal of one hundred.</p>
+
+                            <p>To continue his mission, the Maharaja decides to marry the princess of a neighbouring
+                                state because that kingdom has many tigers in its forests. After marriage, he frequently
+                                visits his father-in-law's forests and continues hunting. Gradually, he kills
+                                ninety-nine tigers. Only one tiger remains before he can complete his mission.</p>
+
+                            <p>The Maharaja searches everywhere for the hundredth tiger but cannot find one. At the same
+                                time, the royal astrologer reminds him that danger still exists until the last tiger is
+                                killed. The Maharaja becomes impatient and angry because his life depends on finding one
+                                more tiger.</p>
+
+                            <p>Seeing the king's frustration, the Dewan (Chief Minister) decides to help. He secretly
+                                buys an old tiger from a circus and releases it into the forest where the Maharaja is
+                                hunting. When the Maharaja sees the tiger, he immediately shoots at it. The tiger falls
+                                to the ground without moving. Believing that the tiger is dead, the Maharaja proudly
+                                announces that he has finally killed his hundredth tiger.</p>
+
+                            <p>However, the truth is different. The Maharaja's bullet does not actually kill the tiger.
+                                It merely frightens the animal, causing it to collapse. Later, the hunters discover that
+                                the tiger is still alive. Fearing the Maharaja's anger, they secretly shoot and kill the
+                                tiger themselves. They then bring its body to the palace. The Maharaja remains unaware
+                                that he did not kill the hundredth tiger himself.</p>
+
+                            <p>Feeling victorious, the Maharaja believes that he has defeated fate forever. He
+                                celebrates his achievement and no longer worries about the astrologers' prediction.
+                                However, destiny has planned something unexpected.</p>
+
+                            <p>A few days later, the Maharaja visits a toy shop to buy a birthday gift for his little
+                                son. He purchases a small wooden tiger made by an unskilled carpenter. The toy has rough
+                                wooden edges and tiny splinters sticking out of it.</p>
+
+                            <p>While playing with his son, the Maharaja accidentally gets a tiny wooden splinter from
+                                the toy tiger stuck in his right hand. At first, he ignores the small injury because it
+                                appears harmless. However, the wound soon becomes infected. His hand swells badly, and
+                                his condition becomes serious.</p>
+
+                            <p>The best surgeons are called to perform an operation on the Maharaja. Although the
+                                surgery appears successful, the doctors are unable to save his life. The Maharaja dies
+                                because of the infection caused by the tiny wooden splinter from the toy tiger.</p>
+
+                            <p>In the end, the astrologers' prophecy comes true. Ironically, the Maharaja is not killed
+                                by a real tiger but by a wooden toy tiger. Despite killing ninety-nine real tigers and
+                                believing he had defeated destiny, he cannot escape his fate. The story ends with deep
+                                irony, showing that no one can change what is destined to happen.</p>
+
+                            <h3>Theme</h3>
+
+                            <p>The chapter explores the themes of fate, destiny, arrogance, misuse of power,
+                                superstition, and irony. It criticizes blind faith in astrology, excessive pride, and
+                                the irresponsible killing of wildlife. The story also highlights that no person, no
+                                matter how powerful, can escape destiny. Through satire and humour, the author exposes
+                                the foolish decisions made by those in authority.</p>
+
+                            <h3>Message for Students</h3>
+
+                            <p>This chapter teaches us that power and wealth cannot protect anyone from fate. We should
+                                never become arrogant or misuse our authority for personal desires. Blind belief in
+                                predictions should not control our lives, and we should respect nature instead of
+                                destroying it. The story also reminds us that true wisdom lies in humility,
+                                responsibility, and accepting that some things in life are beyond human control.</p>
                         </div>
                     </div>
 
@@ -211,13 +438,16 @@
 
                     <!-- MCQS PANEL -->
                     <div class="tab-panel" data-panel="mcqs">
-                        <div class="mcq-score-container" style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
-                            Your Score: <span class="mcq-score-current">0</span> / <span class="mcq-score-total">1</span>
+                        <div class="mcq-score-container"
+                            style="display: none; margin-bottom: 20px; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); background-color: var(--blue-light); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--blue-mid); text-align: center;">
+                            Your Score: <span class="mcq-score-current">0</span> / <span
+                                class="mcq-score-total">1</span>
                         </div>
                         <!-- ADD MATERIAL: replace the sample MCQ(s) below with real questions. Reference PDFs can be kept in /materials/class12/english/02-vistas/chapter-02-the-tiger-king/mcqs/ -->
                         <div class="mcq-quiz-container">
                             <div class="mcq-question" data-correct="A">
-                                <h3 class="mcq-question-text">1. Sample question for The Tiger King — replace with a real MCQ.</h3>
+                                <h3 class="mcq-question-text">1. Sample question for The Tiger King — replace with a
+                                    real MCQ.</h3>
                                 <div class="mcq-options">
                                     <button class="mcq-option" data-option="A">
                                         <span class="mcq-option-prefix">A</span>
@@ -236,7 +466,9 @@
                                         <span class="mcq-option-text">Option D (replace with real option)</span>
                                     </button>
                                 </div>
-                                <div class="mcq-feedback" style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);"></div>
+                                <div class="mcq-feedback"
+                                    style="display: none; margin-top: 12px; font-weight: 600; padding: 8px 12px; border-radius: var(--radius-sm);">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -249,7 +481,8 @@
                                 <h3>Chapter Sample Paper PDF</h3>
                                 <p>Practice exam-standard mock papers designed specifically for this chapter.</p>
                                 <!-- ADD MATERIAL: put the sample paper PDF in /materials/class12/english/02-vistas/chapter-02-the-tiger-king/sample-papers/ then paste its link (or a Drive link) below -->
-                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank" class="resource-btn btn-primary">
+                                <a href="PASTE_SAMPLE_PAPER_DRIVE_LINK_HERE" target="_blank"
+                                    class="resource-btn btn-primary">
                                     📄 Open Sample Paper PDF
                                 </a>
                             </div>
@@ -262,7 +495,10 @@
             <!-- Prev / Next Chapter Navigation -->
             <div class="chapter-nav-buttons">
                 <a href="chapter-01-the-third-level.html" class="chapter-nav-btn prev">
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                    </svg>
                     <span class="nav-label">
                         <span class="nav-eyebrow">Previous</span>
                         <span class="nav-title">The Third Level</span>
@@ -273,7 +509,10 @@
                         <span class="nav-eyebrow">Next</span>
                         <span class="nav-title">Journey to the End of the Earth</span>
                     </span>
-                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
 
@@ -286,7 +525,10 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <div class="logo-icon">
-                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
                     </div>
                     <span class="logo-text">study<span class="logo-accent">Buddy</span></span>
                 </div>
@@ -322,4 +564,5 @@
     <!-- Shared Logic Script -->
     <script src="../../../assets/js/subject.js"></script>
 </body>
+
 </html>
